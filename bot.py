@@ -77,7 +77,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
         f"Halo {user}! 👋\n\n"
         "Saya adalah Bot Deteksi Gambar AI vs Human Art.\n"
-        "Kirimkan foto buah kepada saya, dan saya akan menebak kondisinya (Segar/Rusak)."
+        "Kirimkan foto art kepada saya, dan saya akan menebak buatan (AI / Human)."
     )
 
 async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):

@@ -9,16 +9,10 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
+templates = Jinja2Templates(directory="templates")
 
-# Path absolut agar Vercel tidak bingung
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-# Folder templates ada di luar folder api/
-template_path = os.path.join(BASE_DIR, "..", "templates")
-templates = Jinja2Templates(directory=template_path)
-
-# Load Model
-MODEL_PATH = os.path.join(BASE_DIR, "..", "model_art_ai_human.pth")
+# Konfigurasi Model
+MODEL_PATH = 'model_art_ai_human.pth'
 device = torch.device('cpu')
 
 # Load Model (Logika yang sama dengan bot kamu)
